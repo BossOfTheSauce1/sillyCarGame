@@ -20,8 +20,11 @@ public class TaxiPlayer : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] TextMeshProUGUI finalScoreText;
+    public Material lights;
     public bool isGameOver;
     public bool isOnGround;
+    private Color red;
+    private Color blue;
 
 
 
@@ -29,6 +32,9 @@ public class TaxiPlayer : MonoBehaviour
     {
         isGameOver = false;
         resetRot = new Vector3(0, gameObject.transform.eulerAngles.y, 0);
+        blue = new Color(0,0,255,255);
+        red = new Color(255,0,0,255);
+        lights.SetColor("_Color", blue);
     }
 
     // Update is called once per frame
@@ -37,6 +43,7 @@ public class TaxiPlayer : MonoBehaviour
         IsGrounded();
         if(isGameOver == false && isOnGround)
         {
+            StartCoroutine(Colors());
             horizontalInput = Input.GetAxis("Horizontal");
             verticalInput = Input.GetAxis("Vertical");
             transform.Translate(Vector3.right * Time.deltaTime * speed * -verticalInput);
@@ -117,6 +124,20 @@ public class TaxiPlayer : MonoBehaviour
                 gameObject.transform.position = new Vector3(transform.position.x, 6, transform.position.z);
                 gameObject.transform.eulerAngles = resetRot;
             }
+        }
+    }
+
+    IEnumerator Colors()
+    {
+        if(lights.color == red)
+        {
+            yield return new WaitForSeconds(0.5f);
+            lights.SetColor("_Color", blue);
+        }
+        else if (lights.color == blue)
+        {
+            yield return new WaitForSeconds(0.5f);
+            lights.SetColor("_Color", red);
         }
     }
 }

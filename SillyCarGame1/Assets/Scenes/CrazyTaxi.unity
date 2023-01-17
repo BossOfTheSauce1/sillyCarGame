@@ -943,7 +943,8 @@ MonoBehaviour:
   - {fileID: 853907739}
   scoreText: {fileID: 1396985646}
   timeText: {fileID: 1952507327}
-  finalScoreText: {fileID: 0}
+  finalScoreText: {fileID: 946838211}
+  lights: {fileID: 2100000, guid: a0b470278ec628843b3237dd78c47d16, type: 2}
   isGameOver: 0
   isOnGround: 0
 --- !u!1 &630739728
@@ -1700,6 +1701,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1929414762}
+  pitchValue: 1
+  volumeValue: 1
+  audioSource: {fileID: 0}
   menuActive: 0
 --- !u!4 &966212315
 Transform:
@@ -3610,6 +3614,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
+  pitchValue: 1
+  volumeValue: 1
+  audioSource: {fileID: 0}
   menuActive: 0
 --- !u!114 &1965166103
 MonoBehaviour:
@@ -3929,13 +3936,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2011883791133768916, guid: e56f2de35ee998740846f272e8c02be9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 11.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011883791133768916, guid: e56f2de35ee998740846f272e8c02be9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2011883791416553359, guid: e56f2de35ee998740846f272e8c02be9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 9.51
+      value: 10.2
       objectReference: {fileID: 0}
     - target: {fileID: 2011883791416553359, guid: e56f2de35ee998740846f272e8c02be9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9
+      value: -10.8
       objectReference: {fileID: 0}
     - target: {fileID: 2011883791480163641, guid: e56f2de35ee998740846f272e8c02be9, type: 3}
       propertyPath: m_LocalScale.x
