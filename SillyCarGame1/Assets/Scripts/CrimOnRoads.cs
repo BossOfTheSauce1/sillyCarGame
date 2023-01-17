@@ -13,7 +13,10 @@ public class CrimOnRoads : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(transform.position.y <= -1)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
