@@ -22,6 +22,8 @@ public class TaxiPlayer : MonoBehaviour
     [SerializeField] TextMeshProUGUI finalScoreText;
     public bool isGameOver;
     public bool isOnGround;
+    public AudioClip Capture;
+    public AudioSource audioSource;
 
 
 
@@ -53,6 +55,7 @@ public class TaxiPlayer : MonoBehaviour
         {
             score = score + 1;
             Destroy(collision.gameObject);
+            audioSource.PlayOneShot(Capture, 1.0f);
         }
         if(collision.gameObject.tag == ("Watch"))
         {

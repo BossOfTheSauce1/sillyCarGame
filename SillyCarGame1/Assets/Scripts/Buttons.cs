@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
+    public AudioClip Vroom;
+    public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,5 +37,10 @@ public class Buttons : MonoBehaviour
     public void SnaringSUVS()
     {
         SceneManager.LoadScene("CopTutorial");
+    }
+
+    public void vroom()
+    {
+        audioSource.PlayOneShot(Vroom, 1.0f);
     }
 }
