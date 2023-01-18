@@ -5,22 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-    public GameObject loadingscreen;
-    public Animator carAnimation;
-    public GameObject canvas;
-
+    public AudioClip Vroom;
+    public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
-        loadingscreen.SetActive(false);
+        
     }
-
-    IEnumerator Loading2()
-    {
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("FlyingTutorial");
-    }
-
 
     // Update is called once per frame
     void Update()
@@ -35,9 +26,7 @@ public class Buttons : MonoBehaviour
 
     public void SoaringSedans()
     {
-        loadingscreen.SetActive(true);
-        StartCoroutine(Loading2());   
-        
+        SceneManager.LoadScene("FlyingTutorial");
     }
 
     public void PerilousParking()
@@ -48,5 +37,10 @@ public class Buttons : MonoBehaviour
     public void SnaringSUVS()
     {
         SceneManager.LoadScene("CopTutorial");
+    }
+
+    public void vroom()
+    {
+        audioSource.PlayOneShot(Vroom, 1.0f);
     }
 }
