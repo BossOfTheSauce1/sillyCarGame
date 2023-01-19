@@ -8,11 +8,16 @@ using TMPro;
 public class ParkingArray : MonoBehaviour
 {
     public GameObject[] Spots;
+    public GameObject[] Cars;
     public GameObject CurrentSpot;
+    public GameObject CurrentCar;
     public AudioSource audioSource;
     public AudioClip Score;
+    public AudioClip Doink;
     public int score = 0;
+    public int insurancefund = 3000;
     int index;
+    int index2;
     public TextMeshProUGUI Scoretext;
 
     // Start is called before the first frame update
@@ -35,8 +40,14 @@ public class ParkingArray : MonoBehaviour
     public void CallSpot()
     {
         index = Random.Range(0, Spots.Length);
+        index2 = Random.Range(0, Cars.Length);
         CurrentSpot = Spots[index];
         CurrentSpot.SetActive(true);
+        CurrentCar = Cars[index2];
+        if(CurrentSpot == CurrentCar)
+        {
+            CurrentCar = Cars[index];
+        }
         
     }
 
@@ -47,6 +58,15 @@ public class ParkingArray : MonoBehaviour
             Debug.Log("Parked");
             score = score + 1;
             StartCoroutine(Reset());
+
+        }
+
+        if (other.gameObject.tag == "Car")
+        {
+            Debug.Log("Dented");
+            insurancefund = insurancefund - 1000;
+            audioSource.PlayOneShot(Doink, 1.0f);
+
 
         }
     }

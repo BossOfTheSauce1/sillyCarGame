@@ -80,6 +80,11 @@ public class Buttons : MonoBehaviour
         StartCoroutine(Loading4());
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void vroom()
     {
         audioSource.PlayOneShot(Vroom, 1.0f);
