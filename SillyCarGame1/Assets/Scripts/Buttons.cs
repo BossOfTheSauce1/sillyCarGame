@@ -7,10 +7,16 @@ public class Buttons : MonoBehaviour
 {
     public AudioClip Vroom;
     public AudioSource audioSource;
+    public GameObject loadingscreen;
+    public Animator carAnimation;
+    public CanvasGroup canvasGroup;
+    private bool waiting;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        loadingscreen.SetActive(false);
+        waiting = false;
     }
 
     // Update is called once per frame
@@ -19,6 +25,15 @@ public class Buttons : MonoBehaviour
         
     }
 
+    IEnumerator Loading2()
+    {
+        waiting = true;
+        canvasGroup.alpha = 0;
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("FlyingTutorial");
+    }
+
+
     public void CannonCars()
     {
         SceneManager.LoadScene("CannonTutorial");
@@ -26,7 +41,8 @@ public class Buttons : MonoBehaviour
 
     public void SoaringSedans()
     {
-        SceneManager.LoadScene("FlyingTutorial");
+        loadingscreen.SetActive(true);
+        StartCoroutine(Loading2());
     }
 
     public void PerilousParking()

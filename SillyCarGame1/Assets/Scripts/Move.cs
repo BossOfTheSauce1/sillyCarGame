@@ -35,7 +35,7 @@ public class Move : MonoBehaviour
         }
         
         
-        if (transform.position.z < 0)
+        if (transform.position.z < 100)
         {
             Destroy(gameObject);
         }
