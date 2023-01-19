@@ -13,12 +13,13 @@ public class ParkingArray : MonoBehaviour
     public GameObject CurrentCar;
     public AudioSource audioSource;
     public AudioClip Score;
-    public AudioClip Doink;
+    
     public int score = 0;
-    public int insurancefund = 3000;
+    
     int index;
     int index2;
     public TextMeshProUGUI Scoretext;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,8 @@ public class ParkingArray : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Scoretext.text = "Spots Parked " + score;
+        Scoretext.text = "Spots Parked: " + score;
+        
 
         if (score == 10)
         {
@@ -61,14 +63,7 @@ public class ParkingArray : MonoBehaviour
 
         }
 
-        if (other.gameObject.tag == "Car")
-        {
-            Debug.Log("Dented");
-            insurancefund = insurancefund - 1000;
-            audioSource.PlayOneShot(Doink, 1.0f);
-
-
-        }
+        
     }
 
 
