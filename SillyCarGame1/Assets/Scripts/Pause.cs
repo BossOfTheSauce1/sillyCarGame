@@ -11,6 +11,12 @@ public class Pause : MonoBehaviour
     public AudioSource audioSource;
     public bool menuActive = false;
 
+    
+    void Start()
+    {
+
+    }
+    
     public void Menu()
     {
         SceneManager.LoadScene("Main Menu");
