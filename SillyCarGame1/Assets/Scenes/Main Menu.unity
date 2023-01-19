@@ -558,9 +558,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vroom: {fileID: 0}
   audioSource: {fileID: 0}
-  loadingscreen: {fileID: 0}
-  carAnimation: {fileID: 0}
-  canvasGroup: {fileID: 0}
+  loadingscreen: {fileID: 1100515333}
+  carAnimation: {fileID: 1100515334}
+  canvasGroup: {fileID: 1170242200}
 --- !u!1 &469442683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,9 +1549,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vroom: {fileID: 0}
   audioSource: {fileID: 0}
-  loadingscreen: {fileID: 0}
-  carAnimation: {fileID: 0}
-  canvasGroup: {fileID: 0}
+  loadingscreen: {fileID: 1100515333}
+  carAnimation: {fileID: 1100515334}
+  canvasGroup: {fileID: 1170242200}
 --- !u!1 &1260390002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,9 +1906,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vroom: {fileID: 0}
   audioSource: {fileID: 0}
-  loadingscreen: {fileID: 0}
-  carAnimation: {fileID: 0}
-  canvasGroup: {fileID: 0}
+  loadingscreen: {fileID: 1100515333}
+  carAnimation: {fileID: 1100515334}
+  canvasGroup: {fileID: 1170242200}
 --- !u!1 &2031049146
 GameObject:
   m_ObjectHideFlags: 0
