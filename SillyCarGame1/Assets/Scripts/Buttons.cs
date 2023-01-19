@@ -24,6 +24,13 @@ public class Buttons : MonoBehaviour
     {
         
     }
+    IEnumerator Loading()
+    {
+        waiting = true;
+        canvasGroup.alpha = 0;
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("CannonTutorial");
+    }
 
     IEnumerator Loading2()
     {
@@ -33,10 +40,26 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("FlyingTutorial");
     }
 
+    IEnumerator Loading3()
+    {
+        waiting = true;
+        canvasGroup.alpha = 0;
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("ParkingTutorial");
+    }
+
+    IEnumerator Loading4()
+    {
+        waiting = true;
+        canvasGroup.alpha = 0;
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("CopTutorial");
+    }
 
     public void CannonCars()
     {
-        SceneManager.LoadScene("CannonTutorial");
+        loadingscreen.SetActive(true);
+        StartCoroutine(Loading());
     }
 
     public void SoaringSedans()
@@ -47,12 +70,14 @@ public class Buttons : MonoBehaviour
 
     public void PerilousParking()
     {
-        SceneManager.LoadScene("ParkingTutorial");
+        loadingscreen.SetActive(true);
+        StartCoroutine(Loading3());
     }
 
     public void SnaringSUVS()
     {
-        SceneManager.LoadScene("CopTutorial");
+        loadingscreen.SetActive(true);
+        StartCoroutine(Loading4());
     }
 
     public void vroom()
