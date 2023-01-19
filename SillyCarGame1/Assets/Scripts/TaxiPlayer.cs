@@ -23,7 +23,9 @@ public class TaxiPlayer : MonoBehaviour
     public bool isGameOver;
     public bool isOnGround;
     public AudioClip Capture;
+    public AudioClip clock;
     public AudioSource audioSource;
+    float audioSlider = 0;
 
 
 
@@ -61,6 +63,7 @@ public class TaxiPlayer : MonoBehaviour
         {
             time += 10;
             Destroy(collision.gameObject);
+            audioSource.PlayOneShot(clock, 1.0f);
         }
         foreach(GameObject wheel in wheels)
         {
@@ -103,6 +106,7 @@ public class TaxiPlayer : MonoBehaviour
         gameOver.SetActive(true);
         finalScoreText.text = "Final Score: " + score;
         Debug.Log("Game Over");
+        audioSource.volume = audioSlider;
     }
 
     private void IsGrounded()

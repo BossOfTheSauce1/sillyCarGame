@@ -39,6 +39,11 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("CopTutorial");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void vroom()
     {
         audioSource.PlayOneShot(Vroom, 1.0f);

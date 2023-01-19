@@ -1010,10 +1010,11 @@ MonoBehaviour:
   - {fileID: 853907739}
   scoreText: {fileID: 1396985646}
   timeText: {fileID: 1952507327}
-  finalScoreText: {fileID: 0}
+  finalScoreText: {fileID: 946838211}
   isGameOver: 0
   isOnGround: 0
   Capture: {fileID: 8300000, guid: 4e3e30131819a224380fa4b4db0ca853, type: 3}
+  clock: {fileID: 8300000, guid: fa7b8c29b41b3c545a7551533c6eff8c, type: 3}
   audioSource: {fileID: 557615959}
 --- !u!82 &557615959
 AudioSource:
