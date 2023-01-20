@@ -11,12 +11,16 @@ public class Buttons : MonoBehaviour
     public Animator carAnimation;
     public CanvasGroup canvasGroup;
     private bool waiting;
-
+   
+    string sceneName;
     // Start is called before the first frame update
     void Start()
     {
         loadingscreen.SetActive(false);
         waiting = false;
+        
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
     }
 
     // Update is called once per frame
@@ -59,25 +63,59 @@ public class Buttons : MonoBehaviour
     public void CannonCars()
     {
         loadingscreen.SetActive(true);
-        StartCoroutine(Loading());
+        if (sceneName == "Main Menu")
+        {
+            StartCoroutine(Loading());
+        }
+        else
+        {
+            SceneManager.LoadScene("ShootGame");
+        }
+
     }
 
     public void SoaringSedans()
     {
         loadingscreen.SetActive(true);
-        StartCoroutine(Loading2());
+
+        if (sceneName == "Main Menu")
+        {
+            StartCoroutine(Loading2());
+        }
+        else
+        {
+            SceneManager.LoadScene("FlyingMini");
+        }
+
     }
 
     public void PerilousParking()
     {
         loadingscreen.SetActive(true);
-        StartCoroutine(Loading3());
+
+        if(sceneName == "Main Menu")
+        {
+            StartCoroutine(Loading3());
+        }
+        else
+        {
+            SceneManager.LoadScene("ParkingGame");
+        }
+        
     }
 
     public void SnaringSUVS()
     {
         loadingscreen.SetActive(true);
-        StartCoroutine(Loading4());
+        if (sceneName == "Main Menu")
+        {
+            StartCoroutine(Loading4());
+        }
+        else
+        {
+            SceneManager.LoadScene("CrazyTaxi");
+        }
+
     }
 
     public void MainMenu()
