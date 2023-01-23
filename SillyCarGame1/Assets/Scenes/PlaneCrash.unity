@@ -177,6 +177,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vroom: {fileID: 0}
   audioSource: {fileID: 0}
+  loadingscreen: {fileID: 0}
+  carAnimation: {fileID: 0}
+  canvasGroup: {fileID: 0}
 --- !u!114 &17972802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -618,6 +621,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vroom: {fileID: 0}
   audioSource: {fileID: 0}
+  loadingscreen: {fileID: 100000, guid: 1f4b6eadf05eea64ea2e9067f729c906, type: 3}
+  carAnimation: {fileID: 0}
+  canvasGroup: {fileID: 0}
 --- !u!114 &957786564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,7 +670,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 957786563}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: MainMenu
+        m_MethodName: SoaringSedans
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
