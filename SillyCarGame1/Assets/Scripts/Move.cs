@@ -5,7 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
 
-    private float speed = 4f;
+    private float speed = 1f;
     public bool tony = true;
 
     // Start is called before the first frame update

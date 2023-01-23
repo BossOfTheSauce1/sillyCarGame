@@ -44,10 +44,19 @@ public class EnemyController : MonoBehaviour
             horizontalInput = Input.GetAxis("Horizontal2");
             forwardInput = Input.GetAxis("Vertical2");
 
-
             // move the vehicle forward
-            transform.Translate(Vector3.left * Time.deltaTime * speed * forwardInput);
-            transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+            if (transform.position.z > -20 && transform.position.z < 84)
+            {
+                if (transform.position.x > -50 && transform.position.x < 70)
+                {
+                    transform.Translate(Vector3.left * Time.deltaTime * speed * forwardInput);
+                    transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+                }
+
+            }
+
+           
+            
         }
         
         if (forwardInput > 0)
