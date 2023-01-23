@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 95102700}
   - component: {fileID: 95102699}
   m_Layer: 0
-  m_Name: down key
+  m_Name: left key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,7 +285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95102694}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 4.08, y: -11.18, z: -19.36}
+  m_LocalPosition: {x: 1.33, y: -11.18, z: -19.36}
   m_LocalScale: {x: 0.2217246, y: 0.34553692, z: 0.22164565}
   m_Children: []
   m_Father: {fileID: 563837147}
@@ -1574,7 +1574,7 @@ GameObject:
   - component: {fileID: 1460977375}
   - component: {fileID: 1460977374}
   m_Layer: 0
-  m_Name: up key
+  m_Name: right key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1588,7 +1588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460977372}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 4.07, y: -8.575, z: -19.36}
+  m_LocalPosition: {x: 6.62, y: -11.21, z: -19.36}
   m_LocalScale: {x: 0.2247163, y: 0.311882, z: 0.21421874}
   m_Children: []
   m_Father: {fileID: 563837147}
