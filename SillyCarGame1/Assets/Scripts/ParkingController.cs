@@ -32,7 +32,7 @@ public class ParkingController : MonoBehaviour
 
             // move the vehicle forward
             transform.Translate(Vector3.left * Time.deltaTime * speed * forwardInput);
-            transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+            transform.Rotate(Vector3.down, turnSpeed * horizontalInput * Time.deltaTime * forwardInput);
       
     }
 
