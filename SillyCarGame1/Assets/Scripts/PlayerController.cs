@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     static public float playerRot;
     static public GameObject PortSide;
     static public GameObject StarSide;
+    public Slider Cooldown;
     // Start is called before the first frame update
     void Start()
     {
