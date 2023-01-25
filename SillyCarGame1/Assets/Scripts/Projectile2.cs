@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 
 
 public class Projectile2 : MonoBehaviour
@@ -15,7 +15,7 @@ public class Projectile2 : MonoBehaviour
     public AudioClip shoot;
     public float ShootCD = 3.0f;
     public float shootCdCurrent = 0.0f;
-
+    public TextMeshProUGUI Reloading;
 
     // Start is called before the first frame update
     void Start()
@@ -37,11 +37,13 @@ public class Projectile2 : MonoBehaviour
         if (shootCdCurrent >= ShootCD)
         {
             cantShoot = false;
+            Reloading.enabled = false;
         }
         else
         {
             shootCdCurrent = shootCdCurrent + Time.deltaTime;
             cantShoot = true;
+            Reloading.enabled = true;
         }
 
         CooldownSlider.value = shootCdCurrent / ShootCD;
