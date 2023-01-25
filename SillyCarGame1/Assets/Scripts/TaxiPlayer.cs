@@ -26,19 +26,26 @@ public class TaxiPlayer : MonoBehaviour
     public AudioClip clock;
     public AudioSource audioSource;
     float audioSlider = 0;
+    public Material lights;
+    private Color red;
+    private Color blue;
 
 
 
     void Start()
     {
+        red = new Color(255, 0, 0);
+        blue = new Color(0, 0, 255);
         isGameOver = false;
         resetRot = new Vector3(0, gameObject.transform.eulerAngles.y, 0);
+        lights.SetColor("_Color", red);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         IsGrounded();
+        StartCoroutine(Colors());
         if(isGameOver == false && isOnGround)
         {
             horizontalInput = Input.GetAxis("Horizontal");
@@ -124,6 +131,21 @@ public class TaxiPlayer : MonoBehaviour
                 gameObject.transform.position = new Vector3(transform.position.x, 6, transform.position.z);
                 gameObject.transform.eulerAngles = resetRot;
             }
+        }
+    }
+
+    IEnumerator Colors()
+    {
+        if(lights.color == red)
+        {
+            yield return new WaitForSeconds(1);
+            lights.SetColor("_Color", blue);
+        }
+
+        else if(lights.color == blue)
+        {
+            yield return new WaitForSeconds(1);
+            lights.SetColor("_Color", red);
         }
     }
 }
