@@ -4280,7 +4280,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0d25a32850ce4c746985ab72a656c260, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 609318bf936225044a22159f35d07229, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.33
   m_Pitch: 1
@@ -6392,6 +6392,7 @@ MonoBehaviour:
   CurrentCar: {fileID: 0}
   audioSource: {fileID: 1446296307}
   Score: {fileID: 8300000, guid: e5eb0ebfc2004bc48af379a95e57f05a, type: 3}
+  cooldown: 0
   score: 0
   Scoretext: {fileID: 1607085440}
 --- !u!4 &1446296306

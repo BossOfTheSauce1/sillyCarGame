@@ -618,7 +618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -749.56934, y: -200.96474}
+  m_AnchoredPosition: {x: -757, y: -158}
   m_SizeDelta: {x: 159.85, y: 12.8733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286989558
@@ -668,8 +668,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -704,7 +704,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.9546128, y: -2.2585392, z: -3.2530365, w: 0}
+  m_margin: {x: -0.9546128, y: -12.920834, z: -1.3364487, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2884,7 +2884,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a1e50c728a83d384a86cc990e181c765, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4fcdf68421b2c724b976a793f4b6f3f5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.864
   m_Pitch: 1
@@ -4010,7 +4010,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406511426}
   m_LocalRotation: {x: -0.0010725599, y: 0.0023294862, z: 0.08343223, w: 0.9965102}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 2.4671, y: 2.4671, z: 2.4671}
   m_Children: []
   m_Father: {fileID: 1485571568}
@@ -4018,7 +4018,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -0.145, y: 0.256, z: 9.571}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 751, y: 210}
+  m_AnchoredPosition: {x: 757, y: 172}
   m_SizeDelta: {x: 159.85, y: 12.8733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406511428
@@ -4068,8 +4068,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4104,7 +4104,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.9546128, y: -2.2585392, z: -3.2530365, w: 0}
+  m_margin: {x: -0.9546128, y: -2.2585392, z: -3.2530365, w: -10.188825}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6271,6 +6271,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4895297282025069996, guid: 68e597f9515e95643ad6bb335959b05c, type: 3}
+      propertyPath: Reloading
+      value: 
+      objectReference: {fileID: 1406511428}
+    - target: {fileID: 4895297282025069996, guid: 68e597f9515e95643ad6bb335959b05c, type: 3}
       propertyPath: CooldownSlider
       value: 
       objectReference: {fileID: 1420830562}
@@ -6346,6 +6350,10 @@ PrefabInstance:
       propertyPath: HealthText
       value: 
       objectReference: {fileID: 1147628473}
+    - target: {fileID: 4895297283727101854, guid: 68e597f9515e95643ad6bb335959b05c, type: 3}
+      propertyPath: Reloading
+      value: 
+      objectReference: {fileID: 1406511428}
     - target: {fileID: 4895297283727101854, guid: 68e597f9515e95643ad6bb335959b05c, type: 3}
       propertyPath: CooldownSlider
       value: 
