@@ -13,7 +13,7 @@ public class ParkingArray : MonoBehaviour
     public GameObject CurrentCar;
     public AudioSource audioSource;
     public AudioClip Score;
-    
+    public bool cooldown = false;
     public int score = 0;
     
     int index;
@@ -25,6 +25,7 @@ public class ParkingArray : MonoBehaviour
     void Start()
     {
         CallSpot();
+        
     }
 
     // Update is called once per frame
@@ -46,6 +47,7 @@ public class ParkingArray : MonoBehaviour
         CurrentSpot = Spots[index];
         CurrentSpot.SetActive(true);
         CurrentCar = Cars[index2];
+        cooldown = false;
         if(CurrentSpot == CurrentCar)
         {
             CurrentCar = Cars[index];
@@ -55,8 +57,9 @@ public class ParkingArray : MonoBehaviour
 
    public void Park(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && cooldown == false)
         {
+            cooldown = true;
             Debug.Log("Parked");
             score = score + 1;
             StartCoroutine(Reset());
@@ -83,4 +86,8 @@ public class ParkingArray : MonoBehaviour
 
 
     }
+
+    
 }
+
+

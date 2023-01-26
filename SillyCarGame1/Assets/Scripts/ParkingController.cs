@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ParkingController : MonoBehaviour
 {
@@ -32,8 +33,13 @@ public class ParkingController : MonoBehaviour
 
             // move the vehicle forward
             transform.Translate(Vector3.left * Time.deltaTime * speed * forwardInput);
-            transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+            transform.Rotate(Vector3.down, turnSpeed * horizontalInput * Time.deltaTime * forwardInput);
       
+
+        if (insurancefund <= 0)
+        {
+
+        }
     }
 
     private void OnTriggerEnter(Collider other)
