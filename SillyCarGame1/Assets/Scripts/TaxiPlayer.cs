@@ -7,7 +7,8 @@ public class TaxiPlayer : MonoBehaviour
 {
     private float horizontalInput;
     private float verticalInput;
-    private float score = 0;
+    public int score = 0;
+    private int highscore;
     private float time = 60f;
     private float displayTime;
     public float wheelsOnGround;
@@ -20,6 +21,7 @@ public class TaxiPlayer : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] TextMeshProUGUI finalScoreText;
+    [SerializeField] TextMeshProUGUI highScoreText;
     public bool isGameOver;
     public bool isOnGround;
     public AudioClip Capture;
@@ -44,6 +46,8 @@ public class TaxiPlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        LoadHighScore();
+        SaveHighScore();
         IsGrounded();
         StartCoroutine(Colors());
         if(isGameOver == false && isOnGround)
@@ -112,6 +116,7 @@ public class TaxiPlayer : MonoBehaviour
         gameOn.SetActive(false);
         gameOver.SetActive(true);
         finalScoreText.text = "Final Score: " + score;
+        highScoreText.text = "HighScore: " + highscore;
         Debug.Log("Game Over");
         audioSource.volume = audioSlider;
     }
@@ -146,6 +151,23 @@ public class TaxiPlayer : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             lights.SetColor("_Color", red);
+        }
+    }
+
+    void SaveHighScore()
+    {
+        if(score > highscore)
+        {
+            highscore = score;
+            PlayerPrefs.SetInt("HighScore", highscore);
+        }
+    }
+
+    void LoadHighScore()
+    {
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            highscore = PlayerPrefs.GetInt("HighScore");
         }
     }
 }
