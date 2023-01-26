@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ParkWin.unity
     guid: 3e1f3f1a25a962745b12e71bfd9e631c
+  - enabled: 1
+    path: Assets/Scenes/ParkLose.unity
+    guid: d0cedb44b7a1a594c95177a55689ea29
   m_configObjects: {}

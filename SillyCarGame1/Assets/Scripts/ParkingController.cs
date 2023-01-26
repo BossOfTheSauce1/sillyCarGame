@@ -38,7 +38,7 @@ public class ParkingController : MonoBehaviour
 
         if (insurancefund <= 0)
         {
-
+            SceneManager.LoadScene("ParkLose");
         }
     }
 
